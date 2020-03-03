@@ -1,0 +1,78 @@
+//semester completion
+interface timetable
+{
+void classes();//using two functions in one interface.
+void attendance();
+}
+interface continuousassessment
+{
+void camarks();
+}
+interface midterm
+{
+void mte();
+}
+interface endterm
+{
+void ete();
+}
+interface results
+{
+void cgpa();
+}
+class completion implements timetable,continuousassessment, midterm,endterm,results//implementing more than two interfaces.
+{
+public void classes()
+{
+System.out.println("classes give attendance");
+}
+public void attendance()
+{
+System.out.println("attendance is good hallmark of student");
+}
+public void camarks()
+{
+System.out.println("Continuous assessment helps students to improve");
+}
+public void mte()
+{
+System.out.println("midterm examinations helps us improve our graph");
+}
+public void ete()
+{
+System.out.println("end term examination gives completion to our semester");
+}
+public void cgpa()
+{
+System.out.println("results gives us satisfaction to achieve our degree");
+}
+public void student()
+{
+System.out.println("all above should done by innocent students");
+}
+}
+class multiinterface
+{
+public static void main(String args[])
+{
+timetable c1,a1;
+c1=new completion();
+c1.classes();
+a1=new completion();
+a1.attendance();
+continuousassessment ca;
+ca=new completion();
+ca.camarks();
+midterm m1;
+m1=new completion();
+m1.mte();
+endterm e1;
+e1=new completion();
+e1.ete();
+results r1;
+r1=new completion();
+r1.cgpa();
+completion s1=new completion();
+s1.student();
+}
+}
